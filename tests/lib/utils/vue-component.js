@@ -317,6 +317,42 @@ function invalidTests(ext) {
       code: `export default defineComponent({})`,
       parserOptions,
       errors: [makeError(1)]
+    },
+    {
+      filename: `test.${ext}`,
+      code: `Shopware.Component.register('', {})`,
+      parserOptions,
+      errors: [makeError(1)]
+    },
+    {
+      filename: `test.${ext}`,
+      code: `Shopware.Component.extend('', '', {})`,
+      parserOptions,
+      errors: [makeError(1)]
+    },
+    {
+      filename: `test.${ext}`,
+      code: `Shopware.Component.override('', '', {})`,
+      parserOptions,
+      errors: [makeError(1)]
+    },
+    {
+      filename: `test.${ext}`,
+      code: `Component.register('', {})`,
+      parserOptions,
+      errors: [makeError(1)]
+    },
+    {
+      filename: `test.${ext}`,
+      code: `Component.extend('', '', {})`,
+      parserOptions,
+      errors: [makeError(1)]
+    },
+    {
+      filename: `test.${ext}`,
+      code: `Component.override('', '', {})`,
+      parserOptions,
+      errors: [makeError(1)]
     }
   ]
 }
